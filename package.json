@@ -1,0 +1,37 @@
+{
+  "name": "horse-racing-game",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext .js,.vue",
+    "lint:fix": "eslint . --ext .js,.vue --fix",
+    "format": "prettier --write .",
+    "test": "vitest",
+    "test:watch": "vitest --watch",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run"
+  },
+  "dependencies": {
+    "vue": "^3.5.13",
+    "vuex": "^4.1.0"
+  },
+  "devDependencies": {
+    "@testing-library/vue": "^8.1.0",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "cypress": "^14.2.0",
+    "eslint": "^9.23.0",
+    "eslint-config-prettier": "^10.1.1",
+    "eslint-plugin-prettier": "^5.2.3",
+    "eslint-plugin-vue": "^10.0.0",
+    "jsdom": "^26.0.0",
+    "prettier": "^3.5.3",
+    "vite": "^6.2.0",
+    "vite-svg-loader": "^5.1.0",
+    "vitest": "^3.0.9",
+    "vue-test-utils": "^0.5.0"
+  }
+}
