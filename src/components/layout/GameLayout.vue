@@ -67,6 +67,7 @@ import RaceTrack from '@/components/track/RaceTrack.vue';
 @media (max-width: 1024px) {
   .game-layout {
     flex-direction: column;
+    padding: 20px;
   }
 
   .game-layout__content-wrapper {

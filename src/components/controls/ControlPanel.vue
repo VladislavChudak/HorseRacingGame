@@ -33,4 +33,14 @@ import PauseButton from './PauseButton.vue';
   display: flex;
   gap: 10px;
 }
+
+@media (max-width: 480px) {
+  .control-panel {
+    align-items: baseline;
+  }
+
+  .control-panel__buttons {
+    flex-direction: column;
+  }
+}
 </style>

@@ -40,6 +40,7 @@ const currentLap = computed(() => {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  width: 100%;
 }
 
 .race-track__current-lap {
@@ -56,5 +57,11 @@ const currentLap = computed(() => {
   padding-left: 0;
   background: #eee;
   border-right: 4px solid #c74c3c;
+}
+
+@media (max-width: 1024px) {
+  .race-track {
+    width: 95%;
+  }
 }
 </style>
