@@ -10,7 +10,7 @@ defineProps({
 });
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .empty-state {
   display: flex;
   justify-content: center;

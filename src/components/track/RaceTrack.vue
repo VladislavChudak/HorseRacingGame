@@ -35,7 +35,7 @@ const currentLap = computed(() => {
 });
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .race-track {
   display: flex;
   flex-direction: column;

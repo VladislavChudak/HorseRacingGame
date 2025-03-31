@@ -34,7 +34,7 @@ const horses = computed(() => horseStore.horses);
 const columns = ['Name', 'Condition', 'Color'];
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .horses {
   width: 100%;
   font-size: 14px;

@@ -25,7 +25,7 @@ const style = computed(() => {
 });
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .horse__icon {
   position: absolute;
   left: 0;

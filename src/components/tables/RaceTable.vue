@@ -27,7 +27,7 @@ defineProps({
 });
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .race-table {
   margin-bottom: 20px;
   border: 1px solid #ccc;

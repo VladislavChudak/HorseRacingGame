@@ -11,7 +11,7 @@ defineProps({
 });
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .control-button {
   padding: 10px 16px;
   border: 1px solid #aaa;

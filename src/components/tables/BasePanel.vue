@@ -13,7 +13,7 @@ defineProps({
 });
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .base-panel {
   display: flex;
   flex-direction: column;

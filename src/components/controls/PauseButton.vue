@@ -18,7 +18,7 @@ const racesStarted = computed(() => raceStore.racesStarted);
 const label = computed(() => (raceStore.isRacePaused ? 'Resume' : 'Pause'));
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .pause-button {
   min-width: 100px;
 }

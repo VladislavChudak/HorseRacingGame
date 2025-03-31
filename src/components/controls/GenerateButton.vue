@@ -18,7 +18,7 @@ const generate = () => {
 const racesStarted = computed(() => raceStore.racesStarted);
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .generate-button {
   background-color: #c74c3c;
   color: white;

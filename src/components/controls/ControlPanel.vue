@@ -15,7 +15,7 @@ import StartButton from './StartButton.vue';
 import PauseButton from './PauseButton.vue';
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .control-panel {
   display: flex;
   justify-content: space-between;

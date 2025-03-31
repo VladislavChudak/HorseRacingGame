@@ -24,7 +24,7 @@ onMounted(() => {
 });
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .race-lane__row {
   display: flex;
   align-items: center;

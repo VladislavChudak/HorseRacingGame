@@ -26,7 +26,7 @@ import ControlPanel from '@/components/controls/ControlPanel.vue';
 import RaceTrack from '@/components/track/RaceTrack.vue';
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .game-layout {
   display: flex;
   flex-direction: row;
