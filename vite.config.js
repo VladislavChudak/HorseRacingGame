@@ -4,6 +4,7 @@ import svgLoader from 'vite-svg-loader';
 import path from 'path';
 
 export default defineConfig({
+  base: '/HorseRacingGame/',
   plugins: [vue(), svgLoader()],
   test: {
     globals: true,
