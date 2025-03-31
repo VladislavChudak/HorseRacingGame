@@ -1,6 +1,8 @@
 # HorseRacingGame
 
-Horse Racing Game test task using Vue3 and Vuex
+Horse Racing Game test task using Vue3 and Pinia
+
+Live demo available at https://vladislavchudak.github.io/HorseRacingGame/
 
 To run locally
 ```
