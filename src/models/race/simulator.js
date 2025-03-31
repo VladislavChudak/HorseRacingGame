@@ -18,23 +18,23 @@ export function isRaceFinished(race) {
 }
 
 export function isLastRace(store) {
-  const { currentRaceIndex, raceSchedule } = store.state.races;
+  const { currentRaceIndex, raceSchedule } = store;
   return currentRaceIndex === raceSchedule.length;
 }
 
 export function finalizeRace(race, finishedHorses, store) {
-  store.dispatch('races/finalizeRace', { race, results: finishedHorses }, { root: true });
+  store.finalizeRace({ race, results: finishedHorses });
 
   if (isLastRace(store)) {
-    return store.commit('races/setRacesStarted', false, { root: true });
+    return store.setRacesStarted(false);
   }
 
-  store.dispatch('races/runRace', null, { root: true });
+  store.runRace();
 }
 
 export function tick(race, finishedHorses, store, raceInterval) {
   updateHorseProgress(race, finishedHorses);
-  store.commit('races/updateRaceProgress', race, { root: true });
+  store.updateRaceProgress(race);
 
   if (isRaceFinished(race)) {
     clearInterval(raceInterval);
@@ -50,7 +50,7 @@ export function runRaceSimulation(race, store) {
   const finishedHorses = [];
 
   const raceInterval = setInterval(() => {
-    if (store.state.races.isRacePaused) return;
+    if (store.isRacePaused) return;
 
     tick(race, finishedHorses, store, raceInterval);
   }, RACE_TICK_INTERVAL_MS);

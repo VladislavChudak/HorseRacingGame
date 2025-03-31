@@ -17,16 +17,16 @@
 
 <script setup>
 import { computed } from 'vue';
-import { useStore } from 'vuex';
+import { useRaceStore } from '@/stores/races/useRaceStore';
 import RaceLane from './RaceLane.vue';
 
-const store = useStore();
+const raceStore = useRaceStore();
 
-const currentRace = computed(() => store.getters['races/currentRace']);
-const totalRaces = computed(() => store.state.races.raceSchedule.length);
+const currentRace = computed(() => raceStore.currentRace);
+const totalRaces = computed(() => raceStore.raceSchedule.length);
 
 const currentLap = computed(() => {
-  const index = store.state.races.currentRaceIndex;
+  const index = raceStore.currentRaceIndex;
   const race = currentRace.value;
 
   if (!race || totalRaces.value === index) return 'Press Start to begin the race';

@@ -18,11 +18,11 @@
 
 <script setup>
 import { computed } from 'vue';
-import { useStore } from 'vuex';
+import { useRaceStore } from '@/stores/races/useRaceStore';
 import BasePanel from './BasePanel.vue';
 import RaceTable from './RaceTable.vue';
 import EmptyState from './EmptyState.vue';
 
-const store = useStore();
-const schedule = computed(() => store.state.races.raceSchedule);
+const raceStore = useRaceStore();
+const schedule = computed(() => raceStore.raceSchedule);
 </script>

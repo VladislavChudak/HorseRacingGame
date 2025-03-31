@@ -1,21 +1,21 @@
 <template>
-  <ControlButton class="pause-button" :onClick="toggle" :disabled="!racesStarted">{{
-    label
-  }}</ControlButton>
+  <ControlButton class="pause-button" :onClick="toggle" :disabled="!racesStarted">
+    {{ label }}
+  </ControlButton>
 </template>
 
 <script setup>
 import { computed } from 'vue';
-import { useStore } from 'vuex';
+import { useRaceStore } from '@/stores/races/useRaceStore';
 import ControlButton from './ControlButton.vue';
 
-const store = useStore();
+const raceStore = useRaceStore();
 const toggle = () => {
-  store.dispatch('races/togglePause');
+  raceStore.togglePause();
 };
 
-const racesStarted = computed(() => store.state.races.racesStarted);
-const label = computed(() => (store.state.races.isRacePaused ? 'Resume' : 'Pause'));
+const racesStarted = computed(() => raceStore.racesStarted);
+const label = computed(() => (raceStore.isRacePaused ? 'Resume' : 'Pause'));
 </script>
 
 <style scoped>

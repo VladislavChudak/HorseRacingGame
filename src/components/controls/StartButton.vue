@@ -4,14 +4,14 @@
 
 <script setup>
 import { computed } from 'vue';
-import { useStore } from 'vuex';
+import { useRaceStore } from '@/stores/races/useRaceStore';
+import { useHorseStore } from '@/stores/horses/useHorseStore';
 import ControlButton from './ControlButton.vue';
 
-const store = useStore();
+const raceStore = useRaceStore();
+const horseStore = useHorseStore();
 const start = () => {
-  store.dispatch('races/startNewRace');
+  raceStore.startNewRace();
 };
-const horsesGenerated = computed(
-  () => store.state.horses.horses.length && !store.state.races.racesStarted
-);
+const horsesGenerated = computed(() => horseStore.horses.length && !raceStore.racesStarted);
 </script>

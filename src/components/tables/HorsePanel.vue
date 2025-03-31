@@ -25,12 +25,12 @@
 
 <script setup>
 import { computed } from 'vue';
-import { useStore } from 'vuex';
+import { useHorseStore } from '@/stores/horses/useHorseStore';
 import BasePanel from '@/components/tables/BasePanel.vue';
 import EmptyState from '@/components/tables/EmptyState.vue';
 
-const store = useStore();
-const horses = computed(() => store.state.horses.horses);
+const horseStore = useHorseStore();
+const horses = computed(() => horseStore.horses);
 const columns = ['Name', 'Condition', 'Color'];
 </script>
 

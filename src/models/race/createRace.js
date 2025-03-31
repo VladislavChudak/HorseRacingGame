@@ -15,7 +15,7 @@ export function createRace(id, distance) {
     },
 
     startRace(store) {
-      store.commit('races/setRacesStarted', true, { root: true });
+      store.setRacesStarted(true);
 
       runRaceSimulation(this, store);
     },

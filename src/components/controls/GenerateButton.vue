@@ -1,20 +1,21 @@
 <template>
-  <ControlButton class="generate-button" :onClick="generate" :disabled="racesStarted"
-    >Generate Program</ControlButton
-  >
+  <ControlButton class="generate-button" :onClick="generate" :disabled="racesStarted">
+    Generate Program
+  </ControlButton>
 </template>
 
 <script setup>
 import { computed } from 'vue';
-import { useStore } from 'vuex';
+import { useRaceStore } from '@/stores/races/useRaceStore';
 import ControlButton from './ControlButton.vue';
 
-const store = useStore();
+const raceStore = useRaceStore();
+
 const generate = () => {
-  store.dispatch('races/initializeGame');
+  raceStore.initializeGame();
 };
 
-const racesStarted = computed(() => store.state.races.racesStarted);
+const racesStarted = computed(() => raceStore.racesStarted);
 </script>
 
 <style scoped>

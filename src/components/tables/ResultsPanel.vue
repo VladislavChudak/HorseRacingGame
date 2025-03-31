@@ -15,11 +15,11 @@
 
 <script setup>
 import { computed } from 'vue';
-import { useStore } from 'vuex';
+import { useResultsStore } from '@/stores/results/useResultsStore';
 import BasePanel from './BasePanel.vue';
 import RaceTable from './RaceTable.vue';
 import EmptyState from './EmptyState.vue';
 
-const store = useStore();
-const results = computed(() => store.state.results.results);
+const resultsStore = useResultsStore();
+const results = computed(() => resultsStore.results);
 </script>
